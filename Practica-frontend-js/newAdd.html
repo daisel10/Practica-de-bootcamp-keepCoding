@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/spinner.css">
+  <title>Detail producto</title>
+</head>
+<body>
+  
+  <section class="notification"></section>
+
+  <form class="create-user-form">
+
+    <div id="spinner" class="spinner"></div>
+
+    <label for="name"  name="name" ></label>
+    <input required id="name" name="name" class="name" type="text" placeholder="nombre del producto">
+
+    <label for="descripcion"  name="descripcion" ></label>
+    <input required id="descripcion" name="descripcion" class="descripcion" type="text" placeholder="Descripción">
+
+    <label for="precio"  name="precio" ></label>
+    <input  required id="precio" name="precio" class="precio" type="number" placeholder="precio">
+
+    <div class="venta-compra" id="venta-compra">
+        <label for="venta">venta</label>
+        <input required type="radio" name="venta-compra" id="venta" value="venta">
+
+        <label for="venta">compra</label>
+        <input required type="radio" name="venta-compra" id="compra" value="compra">
+    </div>
+    
+    
+    <button id="createProduct"  type="submit">crear producto</button>
+  </form>
+
+  <script type="module" src="./newAdd/index.js"></script>
+</body>
+</html>
+
+
