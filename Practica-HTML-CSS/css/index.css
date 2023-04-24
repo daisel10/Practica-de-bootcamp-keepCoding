@@ -1,0 +1,214 @@
+/* tener todos los valores predeterminados y reiniciar */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+    /* definición variable */
+    --bg-color: #fff;
+    --main-brand-color: #ff7700;
+    --main-brand-color-light: #ff6a00;
+    --secondary-brand-color: #154ee0;
+    --secondary-brand-color-light: #154ee0;
+    --border-color: #000;
+    --main-text-color: #000;
+    --secondary-bg-light-color: #6B7280;
+    --main-text-hover-color: #4B5563;
+    --secondary-text-color: #FFF;
+    --main-font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  textarea::placeholder {
+    font-family: var(--main-font-family);
+  }
+  input::placeholder {
+    font-family: var(--main-font-family);
+  }
+  
+  .main-bg {
+    background-color: var(--main-brand-color-light);
+    color: var(--main-text-color);
+  }
+  
+  .main-content, .form-container {
+    width: 90%;
+    margin: 40px auto;
+    max-width: 920px;
+  }
+
+  .navbar {
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 75px;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    z-index: 1;
+  }
+  
+  .navbar .image-container {
+    width: 30%;
+    max-width: 120px;
+  }
+  
+  .navbar .image-container img {
+    width: 100%;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s;
+    overflow: hidden;
+    background: var(--border-color);
+    z-index: 0;
+  }
+  .desktop-menu {
+    display: none;
+  }
+  
+  .menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    right: -150px;
+    background-color: var(--bg-color);
+    transition: right .15s linear;
+    z-index: 1;
+  }
+  
+  .menu li {
+    padding: 10px;
+  }
+  
+  #hamburger-input {
+    visibility: hidden;
+  }
+  
+  #hamburger-input:checked + #hamburger-menu .menu {
+    right: 0;
+  }
+  
+  #hamburger-input:checked + #hamburger-menu .overlay{
+    visibility: visible;
+    opacity: 0.4;
+  }
+  
+  .menu .list-item > a {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--main-text-color);
+    transition: color .3s linear;
+  }
+  
+  /* ancho de imagen */
+  @media screen and (min-width: 768px) {
+    .mobile-menu {
+      display: none;
+    }
+    .desktop-menu {
+      display: block;
+    }
+    .desktop-menu .menu {
+      position: relative;
+      width: auto;
+      right: auto;
+      display: flex;
+    }
+    .menu .list-item {
+      padding: 0 10px;
+    }
+    .menu .list-item > a {
+      cursor: pointer;
+    }
+    .menu .list-item > a:hover {
+      color: var(--main-text-hover-color);
+    }
+  }
+  
+  .footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+  }
+  
+  .rrss {
+    width: 60%;
+    max-width: 220px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer .link svg {
+    max-width: 30px;
+  }
+  
+  .footer svg {
+    width: 100%;
+    transition: fill .3s linear;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .footer svg:hover {
+      fill: var(--secondary-brand-color);
+    }
+  }
+
