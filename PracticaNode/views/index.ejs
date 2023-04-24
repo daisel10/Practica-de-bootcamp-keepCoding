@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <p>
+      <% anuncio.forEach(anuncis=> { %>
+        <p>Usuario con nombre <%= usuario.anuncios%> esta en <%= usuario.venta %> se vende a <%= usuario.precio %> tiene estas etiquetas <%=usuario.tags %>.</p>
+        <img src="/public/images/Anuncios/ <%= anuncio.imagen %>" alt="">
+        <% }) %>
+    </p>
+
+  </body>
+</html>
